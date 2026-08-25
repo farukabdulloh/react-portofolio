@@ -1,0 +1,51 @@
+body::before {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    left: -150px;
+    border-radius: 50%;
+    background: #1d4ed8;
+    filter: blur(150px);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+    animation: moveGlow 12s ease-in-out infinite alternate;
+  }
+  
+  body::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    right: -150px;
+    bottom: 5%;
+    border-radius: 50%;
+    background: #2563eb;
+    filter: blur(150px);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+    animation: moveGlowReverse 15s ease-in-out infinite alternate;
+  }
+  
+  @keyframes moveGlow {
+    from {
+      transform: translate(0, 0);
+    }
+  
+    to {
+      transform: translate(200px, 150px);
+    }
+  }
+  
+  @keyframes moveGlowReverse {
+    from {
+      transform: translate(0, 0);
+    }
+  
+    to {
+      transform: translate(-200px, -150px);
+    }
+  }

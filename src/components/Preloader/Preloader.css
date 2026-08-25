@@ -1,0 +1,49 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 100%;
+    height: 100vh;
+  
+    overflow: hidden;
+    background: #18181b;
+  }
+  
+  .welcome-text {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+  
+    opacity: 0;
+    transform: translateY(100px);
+  
+    animation: welcome 2.5s ease-in-out forwards;
+  }
+  
+  @keyframes welcome {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    25% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    65% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+  }
