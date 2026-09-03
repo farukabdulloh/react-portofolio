@@ -1,6 +1,7 @@
 import DataImage from "./data";
 import { listTools, listProyek } from "./data";
 import "./asset/index.css";
+import cv from "./asset/Faruk-Abdulloh-CV.pdf";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/Faruk-Abdulloh-CV.pdf"
+                href={cv}
                 download="Faruk-Abdulloh-CV.pdf"
                 className="rounded-xl bg-blue-900 px-6 py-3 font-medium text-white transition-all duration-300 hover:bg-blue-800 hover:shadow-[0_0_20px_rgba(30,64,175,0.45)]"
               >
