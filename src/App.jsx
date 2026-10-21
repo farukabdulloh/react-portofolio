@@ -214,6 +214,28 @@ function App() {
                         </span>
                       ))}
                     </div>
+                    <div className="mt-6 flex flex-col gap-3">
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full rounded-xl bg-blue-600 px-4 py-2.5 text-center text-sm font-medium text-white transition hover:bg-blue-700 cursor-pointer"
+                        >
+                          Click for See
+                        </a>
+                      )}
+
+                      {project.credentialFile && (
+                        <a
+                          href={`${import.meta.env.BASE_URL}${project.credentialFile}`}
+                          download="ems-credentials.txt"
+                          className="block w-full rounded-xl border border-zinc-700 px-4 py-2.5 text-center text-sm font-medium text-gray-300 transition hover:border-zinc-500 hover:text-white"
+                        >
+                          Download
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

@@ -113,19 +113,21 @@ import Proyek1 from "/assets/proyek/News-Portal.png";
 import Proyek2 from "/assets/proyek/EMS-MERN.png";
 
 
+
 export const listProyek = [
   {
     id: 1,
     gambar: Proyek1,
     nama: "News-Portal",
     desk: "A web- based news management application built with Laravel, Filament, and MySQL.It features authentication, article management, categories, and author roles through an intuitive admin dashboard.",
-    tools: ["PHP", "Laravel", "MySql", "Filamennt", "Tailwind CSS"],
+    tools: ["PHP", "Laravel", "MySql", "Tailwind CSS"],
+    demoUrl: "https://news-portal-1.netlify.app/",
     dad: "200",
   },
   {
     id: 2,
     gambar: Proyek2,
-    nama: "Employe Management System",
+    nama: "Employee Management System",
     desk: "Full-stack Employee Management System built with the MERN Stack. Features include authentication, role-based access, employee CRUD, profile management, attendance, leave management, payslip management, and image upload, with a REST API powered by Node.js, Express.js, and MongoDB.",
     tools: [
       "React.js",
@@ -135,6 +137,8 @@ export const listProyek = [
       "Tailwind CSS",
       "REST API"
     ],
+    demoUrl: "https://mern-fullstack-m7yz.vercel.app/login",
+    credentialFile: "credentials/ems-credentials.txt",
     dad: "300",
   }
 ];
