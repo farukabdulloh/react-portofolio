@@ -1,7 +1,65 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-charcoal-950: #0a0a0c;
+  --color-charcoal-900: #101114;
+  --color-charcoal-850: #15161a;
+  --color-charcoal-800: #1a1b20;
+  --color-charcoal-700: #26272e;
+  --color-charcoal-600: #363842;
+  --color-charcoal-500: #525462;
+  --color-charcoal-400: #787a8b;
+  --color-charcoal-300: #a4a7b7;
+  --color-charcoal-200: #d0d2dd;
+  --color-charcoal-100: #eeeff3;
+  --color-charcoal-50: #f7f7f9;
+}
+
 @layer base {
-    body{
-        font-family: "Poppins", sans-serif;
-    }
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #0c0d0f;
+    color: #e4e4e7;
+    overflow-x: hidden;
+    letter-spacing: -0.011em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #f4f4f5;
+    color: #0c0d0f;
+  }
+}
+
+/* Subtle editorial noise / texture overlay (pure CSS, ultra lightweight) */
+.editorial-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0d0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }

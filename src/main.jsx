@@ -5,17 +5,21 @@ import App from "./App.jsx";
 import Navbar from "./components/Navbar";
 import "remixicon/fonts/remixicon.css";
 import Footer from "./components/Footer";
-import Preloader from "./components/Preloader/Preloader";
 
 import "animate.css";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
-AOS.init();
+import "aos/dist/aos.css";
+
+AOS.init({
+  once: true,
+  offset: 60,
+  duration: 800,
+  easing: "ease-out-cubic",
+});
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-[#0c0d0f] text-[#ededef]">
       <Navbar />
       <App />
       <Footer />
